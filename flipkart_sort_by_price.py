@@ -9,7 +9,6 @@ soup=bs.BeautifulSoup(source_code,'lxml')
 price_list=[]
 for tshirt in soup.find_all('div',{'class':'_3liAhj'}):
     title=tshirt.find('a',{'class':"_2cLu-l"})
-    #print(title.text)
     price = tshirt.find('div',{'class':'_1vC4OE'})
     item = price.text
     l = list(item)
